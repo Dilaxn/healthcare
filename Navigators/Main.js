@@ -7,6 +7,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import css from '../theme/CommonCSS';
 import {faHeart as farHeart} from '@fortawesome/free-regular-svg-icons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 const MyTheme = {
   ...DefaultTheme,
   colors: {
@@ -68,14 +70,18 @@ export default function Main() {
         initialRouteName="Home1"
         screenOptions={{
           tabBarActiveTintColor: '#0d53fc',
-          tabBarShowLabel: false,
-        }}>
+          tabBarShowLabel: false
+        }}
+        // tabBarOptions={{
+        //   keyboardHidesTabBar: true,
+        // }}
+      >
         <Tab.Screen
           name="Home"
           component={HomeNavigator}
           options={{
             tabBarIcon: ({color}) => (
-              <AntDesign name="home" color={color} size={30} />
+              <MIcons name="heart-pulse" color={color} size={30} />
             ),
             headerShown: false,
           }}
@@ -85,7 +91,7 @@ export default function Main() {
           component={SettingsScreen}
           options={{
             tabBarIcon: ({color}) => (
-              <AntDesign name="medicinebox" color={color} size={30} />
+              <MIcons name="stethoscope" color={color} size={30} />
             ),
             headerShown: false,
           }}
@@ -101,7 +107,7 @@ export default function Main() {
               //   color={color}
               //   size={30}
               // />
-              <AntDesign name="form" color={color} size={30} />
+              <MIcons name="calendar-plus" color={color} size={30} />
             ),
             headerShown: false,
           }}
@@ -111,7 +117,7 @@ export default function Main() {
           component={SettingsScreen4}
           options={{
             tabBarIcon: ({color}) => (
-              <AntDesign name="mail" color={color} size={30} />
+              <MIcons name="bell-outline" color={color} size={30} />
             ),
             headerShown: false,
           }}
@@ -121,7 +127,7 @@ export default function Main() {
           component={SettingsScreen5}
           options={{
             tabBarIcon: ({color}) => (
-              <AntDesign name="user" color={color} size={30} />
+              <MIcons name="account-details" color={color} size={30} />
             ),
             headerShown: false,
           }}

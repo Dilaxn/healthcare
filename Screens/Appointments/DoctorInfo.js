@@ -10,6 +10,7 @@ import {
 } from '@expo/vector-icons';
 import TextComp from '../../Components/TextComp';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
+import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const DoctorInfo = props => {
   const {_id, name, service, pic} = props;
@@ -78,15 +79,15 @@ const DoctorInfo = props => {
                   height: '100%',
                 }}>
                 <View style={{flex: 1, width: '100%', height: '100%'}} />
-                <View style={{flex: 8, Height: '100%',     width:"100%",}}>
-                  <Image
-                    style={{
-                      height: '100%',
-                      width:"100%",
-                    }}
-                    source={require('../../assets/images/phone2.png')}
-                    resizeMode="contain"
-                  />
+                <View
+                  style={{
+                    flex: 8,
+                    Height: '100%',
+                    width: '100%',
+                    alignItems: 'center'
+                    ,padding:2
+                  }}>
+                  <MIcons name="phone" size={35} />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />
                 <View style={{flex: 30, Height: '100%'}}>
@@ -106,16 +107,8 @@ const DoctorInfo = props => {
                   height: '100%',
                 }}>
                 <View style={{flex: 1, width: '100%', height: '100%'}} />
-                <View style={{flex: 8, Height: '100%'}}>
-                  <Image
-                    style={{
-                      height: '100%',
-                      borderRadius: 10,
-                      width:"100%",
-                    }}
-                    source={require('../../assets/images/mail2.png')}
-                    resizeMode="contain"
-                  />
+                <View style={{flex: 8, Height: '100%', alignItems: 'center',padding:2}}>
+                  <MIcons name="email-outline" size={35} />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />
                 <View style={{flex: 30, Height: '100%'}}>

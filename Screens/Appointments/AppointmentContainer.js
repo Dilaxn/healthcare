@@ -77,7 +77,7 @@ const AppointmentContainer = ({navigation})=> {
                       </View>
                     <View style={{flex: 2,height:"100%"}} />
                       <TouchableOpacity style={{flex: 5,height:"100%",alignItems:'center'}}
-                      onPress={() => navigation.navigate('AppointmentInfo')}
+                      onPress={() => navigation.navigate('Appointment Information')}
                       >
                         <Image
                           style={{height: '100%'}}

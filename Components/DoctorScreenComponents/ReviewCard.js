@@ -73,8 +73,8 @@ const ReviewCard = ({navigation}) => {
           <TextComp>
             {cont.length > 130 ? cont.substr(0, 130) + '...' : cont}
           </TextComp>
-          <View style={[styles.rating,css.brandBG]}>
-            <TextComp style={{color: '#fff'}}>4.2</TextComp>
+          <View style={[styles.rating]}>
+            <TextComp style={[css.brandC]}>4.2 / 5</TextComp>
           </View>
         </View>
       </View>

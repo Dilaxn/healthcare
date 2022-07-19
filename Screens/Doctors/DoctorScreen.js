@@ -35,7 +35,7 @@ const DoctorScreen = props => {
   return (
     <View>
       <ScrollView>
-        <TextComp style={[styles.homeTitles]}>Doctor Details</TextComp>
+        {/*<TextComp style={[styles.homeTitles]}>Doctor Details</TextComp>*/}
         <View style={{alignItems: 'center'}}>
           <View style={styles.container}>
             <View

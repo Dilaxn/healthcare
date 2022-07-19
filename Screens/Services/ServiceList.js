@@ -8,7 +8,7 @@ const ServiceList = props => {
   return (
     <TouchableOpacity
       onPress={() =>
-        props.navigation.navigate('ServiceScreen', {type: item})
+        props.navigation.navigate('Services', {type: item})
       }>
       <View>
         <ServiceCard {...item} />

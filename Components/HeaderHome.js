@@ -17,6 +17,7 @@ import {
 import SearchBar from 'react-native-platform-searchbar';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const HeaderHome = ({navigation}) => {
   const [searchVal, setSearchVal] = useState('');
   const searchService = text => {

@@ -3,12 +3,11 @@ import {Button, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import ServiceContainer from '../Screens/Services/ServiceContainer';
-import HomeScreen from "../Screens/HomeScreen/HomeScreen";
-import AppointmentInformation from "../Screens/Appointments/AppointmentInformation";
-import DoctorScreen from "../Screens/Doctors/DoctorScreen";
-import MakeAppointment from "../Screens/Appointments/MakeAppointment";
-import ServiceScreen from "../Screens/Services/ServiceScreen";
-
+import HomeScreen from '../Screens/HomeScreen/HomeScreen';
+import AppointmentInformation from '../Screens/Appointments/AppointmentInformation';
+import DoctorScreen from '../Screens/Doctors/DoctorScreen';
+import MakeAppointment from '../Screens/Appointments/MakeAppointment';
+import ServiceScreen from '../Screens/Services/ServiceScreen';
 
 function ProfileScreen({navigation}) {
   return (
@@ -46,15 +45,19 @@ const Stack = createStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}>
-      <Stack.Screen name="Home1" component={HomeScreen} />
-      <Stack.Screen name="AppointmentInfo" component={AppointmentInformation} />
-      <Stack.Screen name="DoctorDetails" component={DoctorScreen} />
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Home"
+        component={HomeScreen}
+      />
+      <Stack.Screen
+        name="Appointment Information"
+        component={AppointmentInformation}
+      />
+      <Stack.Screen name="Doctor Details" component={DoctorScreen} />
       <Stack.Screen name="MakeAppointment" component={MakeAppointment} />
-      <Stack.Screen name="ServiceScreen" component={ServiceScreen} />
+      <Stack.Screen name="Services" component={ServiceScreen} />
     </Stack.Navigator>
   );
 }

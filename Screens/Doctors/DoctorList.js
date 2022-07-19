@@ -10,7 +10,7 @@ const DoctorList = props => {
       // onPress={() =>
       //     props.navigation.navigate("Product Detail", { item: item})
       // }
-      onPress={() => props.navigation.navigate('DoctorDetails')}>
+      onPress={() => props.navigation.navigate('Doctor Details')}>
       <View>
         <DoctorCard {...item} />
         {/*{item.pro_title}*/}

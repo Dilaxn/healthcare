@@ -24,7 +24,7 @@ const AppointmentDate = props => {
   };
   return (
     <View>
-      <TextComp style={[styles.homeTitles]}>Consultation Schedule</TextComp>
+      {/*<TextComp style={[styles.homeTitles]}>Consultation Schedule</TextComp>*/}
       <View style={{alignItems: 'center'}}>
         <View style={styles.container}>
           <View style={{flex: 1, flexWrap: 'wrap', flexDirection: 'row'}}>

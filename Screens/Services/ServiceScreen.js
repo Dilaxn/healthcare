@@ -7,6 +7,7 @@ import {
 } from 'react-native-responsive-screen';
 
 import DoctorContainer from '../Doctors/DoctorContainer';
+import TextComp from '../../Components/TextComp';
 
 const ServiceScreen = ({route, navigation}) => {
   const {type} = route.params;
@@ -28,11 +29,18 @@ const ServiceScreen = ({route, navigation}) => {
         <View
           style={{
             height: 100,
-            backgroundColor: 'green',
+            backgroundColor: '#fff',
             marginTop: -50,
-            width: '80%',
-          }}
-        />
+            width: '90%',
+            borderRadius: 10,
+            alignItems:'center',
+            padding:10
+          }}>
+          <TextComp style={{fontFamily:'georgia',marginTop:10}}>
+            "As a practicing neurologist, I place central importance in applying
+            current science to the notion of disease prevention."
+          </TextComp>
+        </View>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <DoctorContainer navigation={navigation} type={type.service} />
