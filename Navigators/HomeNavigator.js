@@ -6,6 +6,8 @@ import ServiceContainer from '../Screens/Services/ServiceContainer';
 import HomeScreen from "../Screens/HomeScreen/HomeScreen";
 import AppointmentInformation from "../Screens/Appointments/AppointmentInformation";
 import DoctorScreen from "../Screens/Doctors/DoctorScreen";
+import MakeAppointment from "../Screens/Appointments/MakeAppointment";
+import ServiceScreen from "../Screens/Services/ServiceScreen";
 
 
 function ProfileScreen({navigation}) {
@@ -51,7 +53,8 @@ function MyStack() {
       <Stack.Screen name="Home1" component={HomeScreen} />
       <Stack.Screen name="AppointmentInfo" component={AppointmentInformation} />
       <Stack.Screen name="DoctorDetails" component={DoctorScreen} />
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="MakeAppointment" component={MakeAppointment} />
+      <Stack.Screen name="ServiceScreen" component={ServiceScreen} />
     </Stack.Navigator>
   );
 }

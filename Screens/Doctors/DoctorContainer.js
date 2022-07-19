@@ -9,37 +9,43 @@ import TextComp from '../../Components/TextComp';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import DoctorList from './DoctorList';
 
-const DoctorContainer = ({navigation}) => {
+const DoctorContainer = props => {
+  let {type} = props;
   const [doctors, setDoctors] = useState([]);
+  let newData = data.filter(doc => {
+    return doc.type === type || type === 'all';
+  });
+  console.log(newData, type);
   useEffect(() => {
     setDoctors(data);
   }, []);
   return (
     <View>
-      {/*<ProfileCard/>*/}
-      <ScrollView>
-        {doctors.length > 0 ? (
-          <View>
-            <TextComp styles={[styles.homeTitles]}>DOCTORS</TextComp>
-            <ScrollView vertical={true} showsVerticalScrollIndicator={true}>
-              {doctors.map(item => {
-                return (
-                  <DoctorList
-                    // style={[css.flexWrapW, css.flexDR, css.centeredView]}
-                    navigation={navigation}
-                    key={item._id}
-                    item={item}
-                  />
-                );
-              })}
-            </ScrollView>
-          </View>
-        ) : (
-          <View>
-            <Text>No Doctors found</Text>
-          </View>
-        )}
-      </ScrollView>
+      {newData ? (
+        <ScrollView>
+          {newData.length > 0 ? (
+            <View>
+              <TextComp styles={[styles.homeTitles]}>DOCTORS</TextComp>
+              <ScrollView vertical={true} showsVerticalScrollIndicator={true}>
+                {newData.map(item => {
+                  return (
+                    <DoctorList
+                      // style={[css.flexWrapW, css.flexDR, css.centeredView]}
+                      navigation={props.navigation}
+                      key={item._id}
+                      item={item}
+                    />
+                  );
+                })}
+              </ScrollView>
+            </View>
+          ) : (
+            <View>
+              <Text>No Doctors found</Text>
+            </View>
+          )}
+        </ScrollView>
+      ) : null}
     </View>
   );
 };

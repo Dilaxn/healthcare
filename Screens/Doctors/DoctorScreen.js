@@ -240,7 +240,9 @@ const DoctorScreen = props => {
         </View>
         <View style={{alignItems: 'center'}}>
           <View style={[styles.container4]}>
-            <TouchableOpacity style={[styles.button, css.brandBG]}>
+            <TouchableOpacity style={[styles.button, css.brandBG]}
+                              onPress={() => props.navigation.navigate('MakeAppointment')}
+            >
               <TextComp style={{color: '#fff', marginTop: 10}}>
                 Make Appointment
               </TextComp>

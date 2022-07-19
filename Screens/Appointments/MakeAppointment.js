@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 var {width} = Dimensions.get('window');
 import css from '../../theme/CommonCSS';
@@ -35,27 +36,27 @@ const MakeAppointment = props => {
     setShow(false);
   };
   return (
-    <View>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <AppointmentDate />
       <DoctorInfo />
       <PatientInfo />
       <View style={{alignItems: 'center'}}>
         <View style={[styles.container]}>
           <TouchableOpacity style={[styles.button, css.brandBG]}>
-            <TextComp style={{ color: '#fff',marginTop:10}}>
+            <TextComp style={{color: '#fff', marginTop: 10}}>
               Make Appointment
             </TextComp>
           </TouchableOpacity>
         </View>
         <View style={[styles.container]}>
-          <TouchableOpacity style={[styles.button, css.brandBG]}>
-            <TextComp style={{ color: '#fff',marginTop:10}}>
+          <TouchableOpacity style={[styles.button]}>
+            <TextComp style={[{color: '#fff', marginTop: 10}, css.brandC]}>
               Cancel Appointment
             </TextComp>
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

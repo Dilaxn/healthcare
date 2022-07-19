@@ -1,24 +1,41 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
+import {Text, View, StyleSheet, ScrollView, Image} from 'react-native';
 import Banner from '../../Components/HomeScreenComponents/Banner';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import HeaderHome from '../../Components/HeaderHome';
-import ServiceContainer from '../Services/ServiceContainer';
-import DoctorContainer from '../Doctors/DoctorContainer';
-import AppointmentContainer from '../Appointments/AppointmentContainer';
 
-const HomeScreen = ({navigation}) => {
+import DoctorContainer from '../Doctors/DoctorContainer';
+
+const ServiceScreen = ({route, navigation}) => {
+  const {type} = route.params;
+
   return (
     <View>
-      <HeaderHome />
+      <View style={{alignItems: 'center'}}>
+        <View style={{height: 200, backgroundColor: 'red', width: '100%'}}>
+          <Image
+            style={{
+              height: '100%',
+              width: '100%',
+              backgroundColor: '#fff',
+            }}
+            source={{uri: type.bgImg}}
+            resizeMode="stretch"
+          />
+        </View>
+        <View
+          style={{
+            height: 100,
+            backgroundColor: 'green',
+            marginTop: -50,
+            width: '80%',
+          }}
+        />
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Banner />
-        <AppointmentContainer navigation={navigation} />
-        <ServiceContainer navigation={navigation} />
-        <DoctorContainer navigation={navigation} type="all" />
+        <DoctorContainer navigation={navigation} type={type.service} />
       </ScrollView>
     </View>
   );
@@ -67,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default ServiceScreen;

@@ -11,7 +11,7 @@ import {
 import TextComp from '../../Components/TextComp';
 
 const DoctorCard = props => {
-  const {_id, name, service, pic} = props;
+  const {_id, name, service, pic, rate, status} = props;
 
   const [show, setShow] = useState(false);
   const showAlert = () => {
@@ -28,7 +28,11 @@ const DoctorCard = props => {
           {/*<Icon name={service} color="#5ba2f4" size={80} />*/}
           <View style={{flex: 4, height: '100%'}}>
             <Image
-              style={{height: '100%', borderTopLeftRadius: 10, borderBottomLeftRadius: 10,}}
+              style={{
+                height: '100%',
+                borderTopLeftRadius: 10,
+                borderBottomLeftRadius: 10,
+              }}
               source={{
                 uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
               }}
@@ -57,10 +61,37 @@ const DoctorCard = props => {
                     width: '100%',
                   }}>
                   <View style={{flex: 4}}>
-                    <TextComp>{service}</TextComp>
+                    <View
+                      style={{
+                        flex: 1,
+                        flexWrap: 'wrap',
+                        flexDirection: 'row',
+                        width: '100%',
+                      }}>
+                      <View style={{flex: 1}}>
+                        <Image
+                          style={{
+                            height: '80%',
+                            width: '100%',
+                            backgroundColor: '#fff',
+                          }}
+                          source={require('../../assets/images/star.png')}
+                          resizeMode="contain"
+                        />
+                      </View>
+                      <View style={{flex: 5}}>
+                        <TextComp>
+                          {rate ? String(rate) + '/5' : 'N/A'}
+                        </TextComp>
+                      </View>
+                    </View>
                   </View>
                   <View style={{flex: 4, flexDirection: 'row-reverse'}}>
-                    <TextComp>{service}</TextComp>
+                    <View style={[styles.view, css.brandBG]}>
+                      <TextComp style={{color: '#fff', margin: 0}}>
+                        {status}
+                      </TextComp>
+                    </View>
                   </View>
                   <View style={{flex: 1}} />
                 </View>
@@ -121,6 +152,13 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 20,
     marginTop: 10,
+  },
+  view: {
+    color: '#fff',
+    borderRadius: 3,
+    height: '100%',
+    width: '100%',
+    alignItems: 'center',
   },
 });
 

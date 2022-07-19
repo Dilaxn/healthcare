@@ -22,7 +22,7 @@ module.exports = {
     fontSize: wp('3%'),
   },
   //colors-starts
-  brandC: {color: '#5ba2f4'},
+  brandC: {color: '#0d53fc'},
   liteBlueC: {color: '#eff7fc'},
   yellowC: {color: '#f6b700'},
   liteYellowC: {color: '#fffcf1'},

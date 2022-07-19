@@ -6,8 +6,8 @@ import {
   Image,
   Text,
   Button,
-  TouchableOpacity,
-} from 'react-native';
+  TouchableOpacity, ScrollView,
+} from "react-native";
 var {width} = Dimensions.get('window');
 import css from '../../theme/CommonCSS';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -35,7 +35,7 @@ const AppointmentInformation = props => {
     setShow(false);
   };
   return (
-    <View>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <AppointmentDate />
       <DoctorInfo />
       <PatientInfo />
@@ -48,7 +48,7 @@ const AppointmentInformation = props => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

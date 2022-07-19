@@ -7,11 +7,9 @@ const ServiceList = props => {
   const {item} = props;
   return (
     <TouchableOpacity
-
-    // onPress={() =>
-    //     props.navigation.navigate("Product Detail", { item: item})
-    // }
-    >
+      onPress={() =>
+        props.navigation.navigate('ServiceScreen', {type: item})
+      }>
       <View>
         <ServiceCard {...item} />
         {/*{item.pro_title}*/}

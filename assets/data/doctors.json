@@ -3,6 +3,9 @@
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": 3.4,
+  "status" : "Available",
+  "type": "brain",
   "__v": 0
 },{
   "_id": "5f15d545f3a046427a1c26e2"
@@ -10,6 +13,9 @@
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": 5,
+  "status" : "Busy",
+  "type": "heart",
   "__v": 0
 },{
   "_id": "5f15d54cf3a046427a1c26e3"
@@ -17,23 +23,35 @@
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": null,
+  "type": "tooth",
+  "status" : "Available",
   "__v": 0
 },{
   "_id": "5f15d5b2cb4a6642bddc0fe7",
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": 4,
+  "status" : "On Leave",
+  "type": "baby",
   "__v": 0
 },{
   "_id":  "5f15d5b7cb4a6642bddc0fe8",
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": null,
+  "status" : "Available",
+  "type": "heart",
   "__v": 0
 },{
   "_id": "5f15d5cdcb4a6642bddc0fe9",
   "name": "Amalee jackson",
   "service": "Cardiologist",
   "pic": "https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg",
+  "rate": null,
+  "status" : "Available",
+  "type": "brain",
   "__v": 0
 }]
