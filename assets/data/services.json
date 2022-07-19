@@ -1,0 +1,50 @@
+[{
+  "_id": "5f15d5cdcb4a6642bddc0fe9e",
+  "title": "Cardiology",
+  "service": "heart",
+  "pic": "https://i.postimg.cc/LYCkkJQy/heart.png",
+  "__v": 0
+},{
+  "_id": "5f15d545f3a046427a1c26e2"
+  ,
+  "title": "Neurology",
+  "service": "brain",
+  "pic": "https://i.postimg.cc/GHZQSsLV/brain.png",
+  "__v": 0
+},{
+  "_id": "5f15d54cf3a046427a1c26e3"
+  ,
+  "title": "Gynaecology",
+  "service": "baby",
+  "pic": "https://i.postimg.cc/QBqJt4QZ/baby.png",
+  "__v": 0
+},{
+  "_id": "5f15d5b2cb4a6642bddc0fe7",
+  "title": "MBBS",
+  "service": "steroids",
+  "pic": "https://i.postimg.cc/r0FCt1j0/steroids.png",
+
+  "__v": 0
+},{
+  "_id":  "5f15d5b7cb4a6642bddc0fe8",
+  "title": "Dermatology",
+  "service": "skin",
+  "pic": "https://i.postimg.cc/30kXt3P3/skin.png",
+
+  "__v": 0
+},{
+  "_id": "5f15d5cdcb4a6642bddc0fe9",
+  "title": "Dentist",
+  "service": "tooth",
+  "pic": "https://i.postimg.cc/VSwFzQbF/tooth.png",
+
+  "__v": 0
+},
+  {
+    "_id": "5f15d5cdcb4a6642bddc0f22",
+    "title": "Optometry",
+    "service": "eye",
+    "pic": "https://i.postimg.cc/xq83fPqB/eye.png",
+
+    "__v": 0
+  }]
