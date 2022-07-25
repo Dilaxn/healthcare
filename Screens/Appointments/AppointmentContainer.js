@@ -1,5 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, View, Dimensions, Image, Text, Button, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Dimensions,
+  Image,
+  Text,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 var {width} = Dimensions.get('window');
 import css from '../../theme/CommonCSS';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -10,7 +18,7 @@ import {
 } from '@expo/vector-icons';
 import TextComp from '../../Components/TextComp';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
-const AppointmentContainer = ({navigation})=> {
+const AppointmentContainer = ({navigation}) => {
   return (
     <View>
       <TextComp styles={[styles.homeTitles]}>MY APPOINTMENTS</TextComp>
@@ -34,7 +42,7 @@ const AppointmentContainer = ({navigation})=> {
                 }}>
                 <View
                   style={{flex: 1, flexWrap: 'wrap', flexDirection: 'column'}}>
-                  <View style={{flex: 1,width:"100%"}} />
+                  <View style={{flex: 1, width: '100%'}} />
                   <View style={{flex: 4}}>
                     <View
                       style={{
@@ -43,21 +51,19 @@ const AppointmentContainer = ({navigation})=> {
                         flexDirection: 'row',
                         width: '100%',
                         height: '100%',
-
-                      }}
-                    >
-                    <View style={{flex: 2,height:"100%"}} />
-                      <View style={{flex: 4,height:"100%"}} >
+                      }}>
+                      <View style={{flex: 2, height: '100%'}} />
+                      <View style={{flex: 4, height: '100%'}}>
                         <Image
-                          style={{height: '100%', borderRadius:5}}
+                          style={{height: '100%', borderRadius: 5}}
                           source={{
                             uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
                           }}
                           resizeMode="contain"
                         />
                       </View>
-                    <View style={{flex: 2,height:"100%"}} />
-                      <View style={{flex: 16,height:"100%"}} >
+                      <View style={{flex: 2, height: '100%'}} />
+                      <View style={{flex: 16, height: '100%'}}>
                         <View
                           style={{
                             flex: 1,
@@ -65,34 +71,47 @@ const AppointmentContainer = ({navigation})=> {
                             flexDirection: 'column',
                             width: '100%',
                             height: '100%',
-                          }}
-                        >
-                          <View style={{flex: 3,width:"100%"}} >
-                            <TextComp style={{fontWeight:'bold',fontSize:17,color:"#fff"}}>Dilakshan M.</TextComp>
+                          }}>
+                          <View style={{flex: 3, width: '100%'}}>
+                            <TextComp
+                              style={{
+                                fontWeight: 'bold',
+                                fontSize: 17,
+                                color: '#fff',
+                              }}>
+                              Dilakshan M.
+                            </TextComp>
                           </View>
-                          <View style={{flex: 2,width:"100%"}} >
-                            <TextComp style={{color:"#fff"}}>Cardiologist</TextComp>
+                          <View style={{flex: 2, width: '100%'}}>
+                            <TextComp style={{color: '#fff'}}>
+                              Cardiologist
+                            </TextComp>
                           </View>
                         </View>
                       </View>
-                    <View style={{flex: 2,height:"100%"}} />
-                      <TouchableOpacity style={{flex: 5,height:"100%",alignItems:'center'}}
-                      onPress={() => navigation.navigate('Appointment Information')}
-                      >
+                      <View style={{flex: 2, height: '100%'}} />
+                      <TouchableOpacity
+                        style={{flex: 5, height: '100%', alignItems: 'center'}}
+                        onPress={() =>
+                          navigation.navigate('Appointment Information')
+                        }>
                         <Image
                           style={{height: '100%'}}
-                          source={require("./next.png")}
+                          source={require('./next.png')}
                           resizeMode="contain"
                         />
                       </TouchableOpacity>
-                    <View style={{flex: 2,height:"100%"}} />
+                      <View style={{flex: 2, height: '100%'}} />
                     </View>
                   </View>
                   <View style={{flex: 1}} />
                 </View>
               </View>
-              <View style={{flex: 4, alignItems:'center'}} >
-                <TextComp style={{color:"#fff",fontWeight:"bold",fontSize:15}}>Date & Time</TextComp>
+              <View style={{flex: 4, alignItems: 'center'}}>
+                <TextComp
+                  style={{color: '#fff', fontWeight: 'bold', fontSize: 15}}>
+                  Date & Time
+                </TextComp>
               </View>
             </View>
           </View>

@@ -10,7 +10,7 @@ import {
 } from '@expo/vector-icons';
 import TextComp from '../../Components/TextComp';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
-import MIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const PatientInfo = props => {
   const {_id, name, service, pic} = props;
@@ -50,7 +50,7 @@ const PatientInfo = props => {
                     source={{
                       uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
                     }}
-                    resizeMode="cover"
+                    resizeMode="contain"
                   />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />
@@ -79,7 +79,13 @@ const PatientInfo = props => {
                   height: '100%',
                 }}>
                 <View style={{flex: 1, width: '100%', height: '100%'}} />
-                <View style={{flex: 8, Height: '100%',padding:2,alignItems:'center'}}>
+                <View
+                  style={{
+                    flex: 8,
+                    Height: '100%',
+                    padding: 2,
+                    alignItems: 'center',
+                  }}>
                   <MIcons name="phone" size={35} />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />
@@ -100,7 +106,13 @@ const PatientInfo = props => {
                   height: '100%',
                 }}>
                 <View style={{flex: 1, width: '100%', height: '100%'}} />
-                <View style={{flex: 8, Height: '100%',alignItems:'center',padding:2}}>
+                <View
+                  style={{
+                    flex: 8,
+                    Height: '100%',
+                    alignItems: 'center',
+                    padding: 2,
+                  }}>
                   <MIcons name="email-outline" size={35} />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />

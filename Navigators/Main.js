@@ -8,6 +8,7 @@ import css from '../theme/CommonCSS';
 import {faHeart as farHeart} from '@fortawesome/free-regular-svg-icons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import UserNavigator from "./UserNavigator";
 
 const MyTheme = {
   ...DefaultTheme,
@@ -124,7 +125,7 @@ export default function Main() {
         />
         <Tab.Screen
           name="user"
-          component={SettingsScreen5}
+          component={UserNavigator}
           options={{
             tabBarIcon: ({color}) => (
               <MIcons name="account-details" color={color} size={30} />

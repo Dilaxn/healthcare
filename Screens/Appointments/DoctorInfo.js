@@ -50,7 +50,7 @@ const DoctorInfo = props => {
                     source={{
                       uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
                     }}
-                    resizeMode="cover"
+                    resizeMode="contain"
                   />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />

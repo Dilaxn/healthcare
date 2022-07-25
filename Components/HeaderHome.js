@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 25,
     paddingVertical: 5,
-    color: '#0d53fc',
+    color: '#AAAAAA',
   },
   input: {
     width: '95%',
