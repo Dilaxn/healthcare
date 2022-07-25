@@ -24,19 +24,18 @@ const DoctorCard = props => {
   return (
     <View style={{alignItems: 'center'}}>
       <View style={styles.container}>
-        <View style={{flex: 1, flexWrap: 'wrap', flexDirection: 'row'}}>
+        <View style={{flex: 1, flexWrap: 'wrap', flexDirection: 'row',padding:5}}>
           {/*<Icon name={service} color="#5ba2f4" size={80} />*/}
           <View style={{flex: 4, height: '100%'}}>
             <Image
               style={{
                 height: '100%',
-                borderTopLeftRadius: 10,
-                borderBottomLeftRadius: 10,
+                borderRadius:10
               }}
               source={{
                 uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
               }}
-              resizeMode="cover"
+              resizeMode="contain"
             />
           </View>
           <View style={{flex: 1, width: '100%'}} />
@@ -87,8 +86,8 @@ const DoctorCard = props => {
                     </View>
                   </View>
                   <View style={{flex: 4, flexDirection: 'row-reverse'}}>
-                    <View style={[styles.view, css.brandBG]}>
-                      <TextComp style={{color: '#fff', margin: 0}}>
+                    <View style={[styles.view, css.brandAvailableBG]}>
+                      <TextComp style={{color: '#fff'}}>
                         {status}
                       </TextComp>
                     </View>
@@ -109,7 +108,7 @@ const DoctorCard = props => {
 const styles = StyleSheet.create({
   container: {
     width: width - 20,
-    height: width / 3 - 25,
+    height: width / 3 - 5,
     paddingTop: 0,
     borderRadius: 10,
     marginTop: 5,
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 10,
     borderTopLeftRadius: 10,
     borderColor: '#AAAAAA',
-    borderWidth: 0.4,
+    borderWidth: 0.4
   },
   image: {
     width: '100%',
@@ -159,6 +158,7 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     alignItems: 'center',
+    padding:2
   },
 });
 

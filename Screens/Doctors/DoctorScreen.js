@@ -95,15 +95,15 @@ const DoctorScreen = props => {
                     </View>
                   </View>
                   <View style={{flex: 1, height: '100%'}} />
-                  <View style={{flex: 1, height: '100%', alignItems: 'center'}}>
-                    <View
-                      style={{
-                        height: 1,
-                        backgroundColor: '#aaaaaa',
-                        width: '90%',
-                      }}
-                    />
-                  </View>
+                  {/*<View style={{flex: 1, height: '100%', alignItems: 'center'}}>*/}
+                  {/*  <View*/}
+                  {/*    style={{*/}
+                  {/*      height: 0.5,*/}
+                  {/*      backgroundColor: '#aaaaaa',*/}
+                  {/*      width: '90%',*/}
+                  {/*    }}*/}
+                  {/*  />*/}
+                  {/*</View>*/}
 
                   <View style={{flex: 5, width: '100%', height: '100%'}}>
                     <View

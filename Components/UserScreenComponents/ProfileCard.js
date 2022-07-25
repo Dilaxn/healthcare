@@ -18,7 +18,8 @@ import {
 } from '@expo/vector-icons';
 import TextComp from '../../Components/TextComp';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
-import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import MIicons from 'react-native-vector-icons/AntDesign';
 const ProfileCard = ({navigation}) => {
   return (
     <View>
@@ -91,7 +92,11 @@ const ProfileCard = ({navigation}) => {
                     onPress={() =>
                       navigation.navigate('Appointment Information')
                     }>
-                    <MIcons name="logout" color="#8d8d8d" size={width / 3 - 80} />
+                    <MIicons
+                      name="logout"
+                      color="#8d8d8d"
+                      size={width / 3 - 80}
+                    />
                   </TouchableOpacity>
                   <View style={{flex: 2, height: '100%'}} />
                 </View>

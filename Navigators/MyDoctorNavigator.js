@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import UserScreen from '../Screens/UserScreen/UserScreen';
 import PersonalDataScreen from '../Screens/UserScreen/PersonalDataScreen';
-import AccountScreen from "../Screens/UserScreen/AccountScreen";
+import AccountScreen from '../Screens/UserScreen/AccountScreen';
+import MyDoctorScreen from '../Screens/MyDoctorScreen/MyDoctorScreen';
 
 function ProfileScreen({navigation}) {
   return (
@@ -45,18 +46,8 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen
         options={{headerShown: false}}
-        name="My Profile"
-        component={UserScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: true}}
-        name="Personal Data"
-        component={PersonalDataScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: true}}
-        name="Account Screen"
-        component={AccountScreen}
+        name="My Doctors"
+        component={MyDoctorScreen}
       />
       {/*<Stack.Screen*/}
       {/*  name="Appointment Information"*/}
@@ -69,6 +60,6 @@ function MyStack() {
   );
 }
 
-export default function UserNavigator() {
+export default function MyDoctorNavigator() {
   return <MyStack />;
 }

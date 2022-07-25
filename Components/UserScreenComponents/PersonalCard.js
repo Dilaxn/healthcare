@@ -6,8 +6,9 @@ import {
   Image,
   Text,
   Button,
-  TouchableOpacity, Pressable,
-} from "react-native";
+  TouchableOpacity,
+  Pressable,
+} from 'react-native';
 var {width} = Dimensions.get('window');
 import css from '../../theme/CommonCSS';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -32,7 +33,7 @@ const PersonalCard = ({navigation}) => {
             flexDirection: 'row',
             marginTop: 15,
           }}>
-          <MIcons name="user" color="#000" size={30} />
+          <MIcons name="login" color="#000" size={30} />
           <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Login</Text>
         </View>
         <TouchableOpacity
@@ -41,20 +42,24 @@ const PersonalCard = ({navigation}) => {
             flex: 1,
             flexDirection: 'row',
             marginTop: 15,
-          }}>
+          }}
+          onPress={() => navigation.navigate('Account Screen')}>
           <MIcons name="user" color="#000" size={30} />
           <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Account</Text>
         </TouchableOpacity>
-        <View
+        <TouchableOpacity
           style={{
             marginLeft: 12,
             flex: 1,
             flexDirection: 'row',
             marginTop: 15,
-          }}>
+          }}
+          onPress={() => navigation.navigate('Personal Data')}>
           <IOcons name="clipboard-outline" color="#000" size={30} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Personal Data</Text>
-        </View>
+          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>
+            Personal Data
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

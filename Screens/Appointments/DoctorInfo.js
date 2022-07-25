@@ -84,8 +84,8 @@ const DoctorInfo = props => {
                     flex: 8,
                     Height: '100%',
                     width: '100%',
-                    alignItems: 'center'
-                    ,padding:2
+                    alignItems: 'center',
+                    padding: 2,
                   }}>
                   <MIcons name="phone" size={35} />
                 </View>
@@ -107,7 +107,13 @@ const DoctorInfo = props => {
                   height: '100%',
                 }}>
                 <View style={{flex: 1, width: '100%', height: '100%'}} />
-                <View style={{flex: 8, Height: '100%', alignItems: 'center',padding:2}}>
+                <View
+                  style={{
+                    flex: 8,
+                    Height: '100%',
+                    alignItems: 'center',
+                    padding: 2,
+                  }}>
                   <MIcons name="email-outline" size={35} />
                 </View>
                 <View style={{flex: 1, Height: '100%'}} />
@@ -174,7 +180,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   homeTitles: {
-    textTransform: 'uppercase',
     fontSize: wp('4%'),
     marginBottom: 5,
     marginTop: 7,

@@ -55,7 +55,7 @@ export default function Banner() {
         autoplayLoopKeepAnimation
         showPagination
         paginationDefaultColor="#fff"
-        paginationActiveColor="#2eb0e4"
+        paginationActiveColor="#0d53fc"
         paginationStyle={{position: 'absolute', right: 30, bottom: -5}}
         paginationStyleItem={{width: 20, height: 3, marginHorizontal: 5}}
         data={bannerData}

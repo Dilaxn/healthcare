@@ -24,6 +24,7 @@ import PersonalCard from '../../Components/UserScreenComponents/PersonalCard';
 import GeneralCard from '../../Components/UserScreenComponents/GeneralCard';
 
 const UserScreen = props => {
+  const navigation = props.navigation;
   const {_id, name, service, pic} = props;
 
   const [show, setShow] = useState(false);
@@ -36,14 +37,13 @@ const UserScreen = props => {
   };
   return (
     <View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {/*<TextComp style={[styles.homeTitles]}>Doctor Details</TextComp>*/}
         <View>
           <TextComp style={[styles.homeTitles]}>My Profile</TextComp>
           <ProfileCard />
-          <PersonalCard />
+          <PersonalCard navigation={navigation} />
           <GeneralCard />
-          <View style={styles.container} />
         </View>
       </ScrollView>
     </View>

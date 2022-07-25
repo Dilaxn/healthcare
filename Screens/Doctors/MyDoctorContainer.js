@@ -9,7 +9,7 @@ import TextComp from '../../Components/TextComp';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import DoctorList from './DoctorList';
 
-const DoctorContainer = props => {
+const MyDoctorContainer = props => {
   let {type} = props;
   const [doctors, setDoctors] = useState([]);
   let newData = data.filter(doc => {
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DoctorContainer;
+export default MyDoctorContainer;

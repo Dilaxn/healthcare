@@ -9,6 +9,7 @@ import {faHeart as farHeart} from '@fortawesome/free-regular-svg-icons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import UserNavigator from "./UserNavigator";
+import MyDoctorNavigator from "./MyDoctorNavigator";
 
 const MyTheme = {
   ...DefaultTheme,
@@ -78,7 +79,7 @@ export default function Main() {
         // }}
       >
         <Tab.Screen
-          name="Home"
+          name="Home1"
           component={HomeNavigator}
           options={{
             tabBarIcon: ({color}) => (
@@ -88,8 +89,8 @@ export default function Main() {
           }}
         />
         <Tab.Screen
-          name="Settings"
-          component={SettingsScreen}
+          name="My Doctor"
+          component={MyDoctorNavigator}
           options={{
             tabBarIcon: ({color}) => (
               <MIcons name="stethoscope" color={color} size={30} />

@@ -40,6 +40,7 @@ module.exports = {
   //colors-ends
   //bg-starts
   brandBG: {backgroundColor: '#0d53fc'}, //header
+  brandAvailableBG: {backgroundColor: '#53A1FD'}, //header
   liteBlueBG: {backgroundColor: '#eff7fc'},
   yellowBG: {backgroundColor: '#f6b700'},
   liteWhiteBG: {backgroundColor: '#fafafa'},

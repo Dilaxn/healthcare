@@ -179,7 +179,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   homeTitles: {
-    textTransform: 'uppercase',
     fontSize: wp('4%'),
     marginBottom: 5,
     marginTop: 7,
