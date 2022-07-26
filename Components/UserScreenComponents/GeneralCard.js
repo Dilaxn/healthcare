@@ -34,7 +34,7 @@ const GeneralCard = ({navigation}) => {
               marginTop: 15,
             }}>
             <MIcons name="user" color="#000" size={25} />
-            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color:"#000"}}>
               Notification
             </Text>
           </View>
@@ -46,7 +46,8 @@ const GeneralCard = ({navigation}) => {
               marginTop: 15,
             }}>
             <IOcons name="shield-checkmark-outline" color="#000" size={25} />
-            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Security</Text>
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color:"#000"}}>
+              Security</Text>
           </View>
           <View
             style={{
@@ -56,7 +57,8 @@ const GeneralCard = ({navigation}) => {
               marginTop: 15,
             }}>
             <IOcons name="ios-help" color="#000" size={25} />
-            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Help</Text>
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color:"#000"}}>
+              Help</Text>
           </View>
           <View
             style={{
@@ -66,7 +68,8 @@ const GeneralCard = ({navigation}) => {
               marginTop: 15,
             }}>
             <IOcons name="information-circle-outline" color="#000" size={25} />
-            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>About</Text>
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color:"#000"}}>
+              About</Text>
           </View>
         </View>
       </View>

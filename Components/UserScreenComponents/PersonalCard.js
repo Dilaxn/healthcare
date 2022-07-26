@@ -27,41 +27,45 @@ const PersonalCard = ({navigation}) => {
       <View style={styles.container3}>
         <Text style={styles.homeTitles}>Personal</Text>
         <View style={{marginLeft: 10}}>
-        <View
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}>
-          <MIcons name="login" color="#000" size={25} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Login</Text>
+          <View
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}>
+            <MIcons name="login" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color: '#000'}}>
+              Login
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}
+            onPress={() => navigation.navigate('Account Screen')}>
+            <MIcons name="user" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color: '#000'}}>
+              Account
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}
+            onPress={() => navigation.navigate('Personal Data')}>
+            <IOcons name="clipboard-outline" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%'), color: '#000'}}>
+              Personal Data
+            </Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}
-          onPress={() => navigation.navigate('Account Screen')}>
-          <MIcons name="user" color="#000" size={25} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Account</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}
-          onPress={() => navigation.navigate('Personal Data')}>
-          <IOcons name="clipboard-outline" color="#000" size={25} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>
-            Personal Data
-          </Text>
-        </TouchableOpacity>
-      </View>
       </View>
     </View>
   );
