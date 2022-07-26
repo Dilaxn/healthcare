@@ -25,7 +25,7 @@ const MyDoctorContainer = props => {
         <ScrollView>
           {newData.length > 0 ? (
             <View style={{marginBottom: 40}}>
-              <TextComp styles={[styles.homeTitles]}>DOCTORS</TextComp>
+              <TextComp styles={[styles.homeTitles]}>MY DOCTORS</TextComp>
               <ScrollView vertical={true} showsVerticalScrollIndicator={true}>
                 {newData.map(item => {
                   return (

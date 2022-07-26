@@ -26,6 +26,7 @@ const PersonalCard = ({navigation}) => {
     <View>
       <View style={styles.container3}>
         <Text style={styles.homeTitles}>Personal</Text>
+        <View style={{marginLeft: 10}}>
         <View
           style={{
             marginLeft: 12,
@@ -33,7 +34,7 @@ const PersonalCard = ({navigation}) => {
             flexDirection: 'row',
             marginTop: 15,
           }}>
-          <MIcons name="login" color="#000" size={30} />
+          <MIcons name="login" color="#000" size={25} />
           <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Login</Text>
         </View>
         <TouchableOpacity
@@ -44,7 +45,7 @@ const PersonalCard = ({navigation}) => {
             marginTop: 15,
           }}
           onPress={() => navigation.navigate('Account Screen')}>
-          <MIcons name="user" color="#000" size={30} />
+          <MIcons name="user" color="#000" size={25} />
           <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Account</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -55,11 +56,12 @@ const PersonalCard = ({navigation}) => {
             marginTop: 15,
           }}
           onPress={() => navigation.navigate('Personal Data')}>
-          <IOcons name="clipboard-outline" color="#000" size={30} />
+          <IOcons name="clipboard-outline" color="#000" size={25} />
           <Text style={{marginLeft: 10, fontSize: wp('5%')}}>
             Personal Data
           </Text>
         </TouchableOpacity>
+      </View>
       </View>
     </View>
   );

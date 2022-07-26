@@ -25,45 +25,49 @@ const GeneralCard = ({navigation}) => {
     <View>
       <View style={styles.container3}>
         <Text style={styles.homeTitles}>General</Text>
-        <View
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}>
-          <MIcons name="user" color="#000" size={30} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Notification</Text>
-        </View>
-        <View
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}>
-          <IOcons name="shield-checkmark-outline" color="#000" size={30} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Security</Text>
-        </View>
-        <View
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}>
-          <IOcons name="ios-help" color="#000" size={30} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Help</Text>
-        </View>
-        <View
-          style={{
-            marginLeft: 12,
-            flex: 1,
-            flexDirection: 'row',
-            marginTop: 15,
-          }}>
-          <IOcons name="information-circle-outline" color="#000" size={30} />
-          <Text style={{marginLeft: 10, fontSize: wp('5%')}}>About</Text>
+        <View style={{marginLeft: 10}}>
+          <View
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}>
+            <MIcons name="user" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>
+              Notification
+            </Text>
+          </View>
+          <View
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}>
+            <IOcons name="shield-checkmark-outline" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Security</Text>
+          </View>
+          <View
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}>
+            <IOcons name="ios-help" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>Help</Text>
+          </View>
+          <View
+            style={{
+              marginLeft: 12,
+              flex: 1,
+              flexDirection: 'row',
+              marginTop: 15,
+            }}>
+            <IOcons name="information-circle-outline" color="#000" size={25} />
+            <Text style={{marginLeft: 10, fontSize: wp('5%')}}>About</Text>
+          </View>
         </View>
       </View>
     </View>
