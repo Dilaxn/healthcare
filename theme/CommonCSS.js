@@ -135,7 +135,7 @@ module.exports = {
   borderRadius50: {borderRadius: 50},
   borderGrey1: {borderWidth: 1, borderColor: '#ccc'},
   borderBlack1: {borderWidth: 1, borderColor: '#525252'},
-  borderBrand1: {borderWidth: 1, borderColor: '#2eb0e4'},
+  borderBrand1: {borderWidth: 1, borderColor: '#0d53fc'},
   imgFull: {width: '100%'},
   img95: {width: '95%'},
   img90: {width: '90%'},

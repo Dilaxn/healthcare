@@ -7,7 +7,6 @@ import {
   Text,
   Button,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 var {width} = Dimensions.get('window');
 import css from '../../theme/CommonCSS';
@@ -19,12 +18,14 @@ import {
 } from '@expo/vector-icons';
 import TextComp from '../../Components/TextComp';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
+import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import IIcons from 'react-native-vector-icons/Ionicons';
 import DoctorInfo from './DoctorInfo';
-import AppointmentDate from './AppointmentDate';
-import PatientInfo from './PatientInfo';
-import brandC from '../../theme/CommonCSS';
+import DoctorInfoAppointment from '../../Components/AppointmentScreenComponents/DoctorInfoAppointment';
+import AppointmentContainer from './AppointmentContainer';
+import AppointmentBookedDoctor from '../../Components/AppointmentScreenComponents/AppointmentBookedDoctor';
 
-const MakeAppointment = props => {
+const AppointmentBookedScreen = props => {
   const {_id, name, service, pic} = props;
 
   const [show, setShow] = useState(false);
@@ -36,29 +37,40 @@ const MakeAppointment = props => {
     setShow(false);
   };
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <AppointmentDate />
-      <DoctorInfo />
-      <PatientInfo />
-      <View style={{alignItems: 'center'}}>
-        <View style={[styles.container]}>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('Book Appointment')}
-            style={[styles.button, css.brandBG]}>
-            <TextComp style={{color: '#fff', marginTop: 10}}>
-              Make Appointment
-            </TextComp>
-          </TouchableOpacity>
+    <View>
+      {/*<TextComp style={[styles.homeTitles]}>Doctor Information</TextComp>*/}
+      <View  style={{alignItems: 'center',flexDirection: 'column'}}>
+        <View style={styles.container}>
+          <MIcons name="checkbox-outline" size={wp('12%')} color="#0d53fc" />
+          <TextComp
+            style={{fontSize: wp('8%'), fontWeight: 'bold', color: '#000'}}>
+            Appointment
+          </TextComp>
+          <TextComp
+            style={{fontSize: wp('8%'), fontWeight: 'bold', color: '#000'}}>
+            Booked
+          </TextComp>
+          <AppointmentBookedDoctor />
         </View>
-        <View style={[styles.container]}>
-          <TouchableOpacity style={[styles.button]}>
-            <TextComp style={[{color: '#fff', marginTop: 10}, css.brandC]}>
-              Cancel Appointment
-            </TextComp>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate('Book Appointment')}
+          style={[
+            styles.button,
+            css.brandBG,
+            {
+              width: wp('95%'),
+              borderRadius: 3,
+              margin: 40,
+              alignItems: 'center',
+              marginTop: wp(50),
+            },
+          ]}>
+          <TextComp style={{color: '#fff', margin: 10}}>OK</TextComp>
+        </TouchableOpacity>
+
+        {/*<Text>{_id}</Text>*/}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -67,19 +79,13 @@ const styles = StyleSheet.create({
     width: width - 20,
     paddingTop: 0,
     borderRadius: 10,
-    marginTop: 5,
+    marginTop: wp('30%'),
     marginBottom: 5,
     alignItems: 'center',
-    elevation: 8,
-    backgroundColor: '#fff',
-    shadowColor: 'rgba(0,0,0, .0)', // IOS
-    shadowOffset: {height: 0, width: 0},
-    shadowOpacity: 0,
-    shadowRadius: 0,
     borderBottomLeftRadius: 10,
     borderTopLeftRadius: 10,
     borderColor: '#AAAAAA',
-    borderWidth: 0.4,
+
   },
   image: {
     width: '100%',
@@ -109,7 +115,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   homeTitles: {
-    textTransform: 'uppercase',
     fontSize: wp('4%'),
     marginBottom: 5,
     marginTop: 7,
@@ -118,12 +123,6 @@ const styles = StyleSheet.create({
     fontFamily: 'PoppinsSB',
     color: '#0f0f0f',
   },
-  button: {
-    alignItems: 'center',
-    width: '100%',
-    height: 40,
-    borderRadius: 5,
-  },
 });
 
-export default MakeAppointment;
+export default AppointmentBookedScreen;

@@ -10,6 +10,8 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import UserNavigator from "./UserNavigator";
 import MyDoctorNavigator from "./MyDoctorNavigator";
+import AppointmentScreen1 from "../Screens/Appointments/AppointmentScreen1";
+import AppointmentNavigator from "./AppointmentNavigator";
 
 const MyTheme = {
   ...DefaultTheme,
@@ -99,8 +101,8 @@ export default function Main() {
           }}
         />
         <Tab.Screen
-          name="Settings3"
-          component={SettingsScreen3}
+          name="Appointment"
+          component={AppointmentNavigator}
           options={{
             tabBarIcon: ({color}) => (
               // <Icon
