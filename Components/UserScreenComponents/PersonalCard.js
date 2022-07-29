@@ -27,18 +27,19 @@ const PersonalCard = ({navigation}) => {
       <View style={styles.container3}>
         <Text style={styles.homeTitles}>Personal</Text>
         <View style={{marginLeft: 10}}>
-          <View
+          <TouchableOpacity
             style={{
               marginLeft: 12,
               flex: 1,
               flexDirection: 'row',
               marginTop: 15,
-            }}>
+            }}
+            onPress={() => navigation.navigate('Sign In')}>
             <MIcons name="login" color="#000" size={25} />
             <Text style={{marginLeft: 10, fontSize: wp('5%'), color: '#000'}}>
               Login
             </Text>
-          </View>
+          </TouchableOpacity>
           <TouchableOpacity
             style={{
               marginLeft: 12,

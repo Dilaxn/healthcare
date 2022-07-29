@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {
   Text,
   View,
@@ -18,15 +18,32 @@ import css from '../../theme/CommonCSS';
 import MIcons from 'react-native-vector-icons/AntDesign';
 import FIcons from 'react-native-vector-icons/Fontisto';
 import brandBG from '../../theme/CommonCSS';
-import AppointmentDoctorContainer from "../../Components/AppointmentScreenComponents/AppointmentDoctorContainer";
+import AppointmentDoctorContainer from '../../Components/AppointmentScreenComponents/AppointmentDoctorContainer';
+import {BookContext} from '../../Context/BookAppointment';
+import {useFocusEffect} from '@react-navigation/native';
 
 const AppointmentScreen1 = ({navigation}) => {
+  const [booked, setBooked] = useContext(BookContext);
+
+  const handleClick = event => {
+    console.log('clicked');
+  };
+  useFocusEffect(
+    useCallback(() => {
+      setBooked(null);
+    }, []),
+  );
+
   return (
     <View>
       <HeaderHome />
       <View style={{height: hp(70)}}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <AppointmentDoctorContainer navigation={navigation} type="all" />
+          <AppointmentDoctorContainer
+            handleClick={handleClick}
+            navigation={navigation}
+            type="all"
+          />
         </ScrollView>
       </View>
       <View
@@ -41,64 +58,81 @@ const AppointmentScreen1 = ({navigation}) => {
             elevation: 8,
           },
         ]}>
-        {/*<TextComp size={css.f20} style={[css.marginT20]}>Please select Doctor first</TextComp>*/}
-        {/*<FIcons*/}
-        {/*  name="stethoscope"*/}
-        {/*  color="#000"*/}
-        {/*  size={25}*/}
-        {/*  style={{marginTop: 10}}*/}
-        {/*/>*/}
-        <View style={{alignItems: 'center', height: '100%', width: '100%'}}>
-          <View style={{flex: 1, height: '100%', width: '100%'}}>
-            <View
-              style={{
-                flex: 1,
-                flexWrap: 'wrap',
-                flexDirection: 'row',
-                marginBottom: -20,
-              }}>
-              <View style={{flex: 1, height: '100%'}} />
-              {/*<Icon name={service} color="#5ba2f4" size={80} />*/}
-              <View style={{flex: 10, height: '100%'}}>
-                <View
-                  style={{flex: 1, flexWrap: 'wrap', flexDirection: 'column'}}>
-                  <View style={{flex: 1, width: '100%'}} />
-                  <View style={{flex: 5, Height: '100%'}}>
-                    <TextComp style={{fontWeight: 'bold'}}>2022/10/02</TextComp>
-                    <TextComp>10.00 a.m</TextComp>
-                  </View>
-                  {/*<View style={{flex: 1, Height: '100%'}} />*/}
-                </View>
-              </View>
-              <View style={{flex: 10, width: '100%'}}>
-                <View
-                  style={{flex: 1, flexWrap: 'wrap', flexDirection: 'column'}}>
-                  <View style={{flex: 1, width: '100%'}} />
+        {booked ? (
+          <View style={{alignItems: 'center', height: '100%', width: '100%'}}>
+            <View style={{flex: 1, height: '100%', width: '100%'}}>
+              <View
+                style={{
+                  flex: 1,
+                  flexWrap: 'wrap',
+                  flexDirection: 'row',
+                  marginBottom: -20,
+                }}>
+                <View style={{flex: 1, height: '100%'}} />
+                {/*<Icon name={service} color="#5ba2f4" size={80} />*/}
+                <View style={{flex: 10, height: '100%'}}>
                   <View
-                    style={{flex: 5, Height: '100%', alignItems: 'flex-end'}}>
-                    <TextComp style={{fontWeight: 'bold', opacity: 0.7}}>
-                      3 Days
-                    </TextComp>
-                    <TextComp style={{opacity: 0.7}}>From Today</TextComp>
+                    style={{
+                      flex: 1,
+                      flexWrap: 'wrap',
+                      flexDirection: 'column',
+                    }}>
+                    <View style={{flex: 1, width: '100%'}} />
+                    <View style={{flex: 5, Height: '100%'}}>
+                      <TextComp style={{fontWeight: 'bold'}}>
+                        {booked.name}
+                      </TextComp>
+                      <TextComp> 2022/10/02</TextComp>
+                    </View>
+                    {/*<View style={{flex: 1, Height: '100%'}} />*/}
                   </View>
-                  <View style={{flex: 1, Height: '100%'}} />
                 </View>
+                <View style={{flex: 10, width: '100%'}}>
+                  <View
+                    style={{
+                      flex: 1,
+                      flexWrap: 'wrap',
+                      flexDirection: 'column',
+                    }}>
+                    <View style={{flex: 1, width: '100%'}} />
+                    <View
+                      style={{flex: 5, Height: '100%', alignItems: 'flex-end'}}>
+                      <TextComp style={{fontWeight: 'bold', opacity: 0.7}}>
+                        {booked.service}
+                      </TextComp>
+                      <TextComp style={{opacity: 0.7}}>10.00 am</TextComp>
+                    </View>
+                    <View style={{flex: 1, Height: '100%'}} />
+                  </View>
+                </View>
+                <View style={{flex: 1, width: '100%'}} />
               </View>
-              <View style={{flex: 1, width: '100%'}} />
+              <TouchableOpacity
+                onPress={() => navigation.navigate('MakeAppointment')}
+                style={{
+                  flex: 1,
+                  Height: '100%',
+                  alignItems: 'center',
+                  marginTop: -30,
+                }}>
+                <TextComp style={[css.brandC]}>Continue >></TextComp>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('MakeAppointment')}
-              style={{
-                flex: 1,
-                Height: '100%',
-                alignItems: 'center',
-                marginTop: -30,
-              }}>
-              <TextComp style={[css.brandC]}>Continue >></TextComp>
-            </TouchableOpacity>
+            {/*<Text>{_id}</Text>*/}
           </View>
-          {/*<Text>{_id}</Text>*/}
-        </View>
+        ) : (
+          <View style={{alignItems: 'center'}}>
+            <TextComp size={css.f20} style={[css.marginT20]}>
+              Please select Doctor first
+            </TextComp>
+            <FIcons
+              name="stethoscope"
+              color="#000"
+              size={35}
+              style={{marginTop: 10}}
+            />
+          </View>
+        )}
       </View>
     </View>
   );

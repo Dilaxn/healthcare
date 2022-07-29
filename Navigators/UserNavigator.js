@@ -4,7 +4,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import UserScreen from '../Screens/UserScreen/UserScreen';
 import PersonalDataScreen from '../Screens/UserScreen/PersonalDataScreen';
-import AccountScreen from "../Screens/UserScreen/AccountScreen";
+import AccountScreen from '../Screens/UserScreen/AccountScreen';
+import Login from '../Screens/SignScreen/LoginScreen';
+import Register from "../Screens/SignScreen/RegisterScreen";
+import ResetMail from "../Screens/SignScreen/ResetMail";
+import ResetOTP from "../Screens/SignScreen/ResetOTP";
 
 function ProfileScreen({navigation}) {
   return (
@@ -58,6 +62,31 @@ function MyStack() {
         name="Account Screen"
         component={AccountScreen}
       />
+
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Sign In"
+        component={Login}
+      />
+
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Sign Up"
+        component={Register}
+      />
+
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Reset Mail"
+        component={ResetMail}
+      />
+
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Reset OTP"
+        component={ResetOTP}
+      />
+
       {/*<Stack.Screen*/}
       {/*  name="Appointment Information"*/}
       {/*  component={AppointmentInformation}*/}

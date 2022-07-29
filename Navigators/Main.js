@@ -12,6 +12,7 @@ import UserNavigator from "./UserNavigator";
 import MyDoctorNavigator from "./MyDoctorNavigator";
 import AppointmentScreen1 from "../Screens/Appointments/AppointmentScreen1";
 import AppointmentNavigator from "./AppointmentNavigator";
+import SignNavigator from "./SignNavigator";
 
 const MyTheme = {
   ...DefaultTheme,

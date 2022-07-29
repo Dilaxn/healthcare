@@ -21,6 +21,10 @@ module.exports = {
     color: '#525252',
     fontSize: wp('3%'),
   },
+
+  brandPrimary: '#0d53fc',
+
+
   //colors-starts
   brandC: {color: '#0d53fc'},
   liteBlueC: {color: '#eff7fc'},

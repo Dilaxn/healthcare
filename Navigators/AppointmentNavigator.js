@@ -6,8 +6,10 @@ import UserScreen from '../Screens/UserScreen/UserScreen';
 import PersonalDataScreen from '../Screens/UserScreen/PersonalDataScreen';
 import AccountScreen from '../Screens/UserScreen/AccountScreen';
 import MyDoctorScreen from '../Screens/MyDoctorScreen/MyDoctorScreen';
-import AppointmentScreen1 from "../Screens/Appointments/AppointmentScreen1";
-import AppointmentBookedScreen from "../Screens/Appointments/AppointmentBookedScreen";
+import AppointmentScreen1 from '../Screens/Appointments/AppointmentScreen1';
+import AppointmentBookedScreen from '../Screens/Appointments/AppointmentBookedScreen';
+import {BookContext} from '../Context/BookAppointment';
+import {useContext, useEffect} from 'react';
 
 function ProfileScreen({navigation}) {
   return (
@@ -44,6 +46,11 @@ function SettingsScreen({navigation}) {
 const Stack = createStackNavigator();
 
 function MyStack() {
+  const [booked, setBooked] = useContext(BookContext);
+  useEffect(() => {
+    setBooked(null);
+  }, []);
+
   return (
     <Stack.Navigator>
       <Stack.Screen

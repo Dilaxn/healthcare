@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -28,6 +28,8 @@ import {
 import ServiceContainer from './Screens/Services/ServiceContainer';
 import Main from './Navigators/Main';
 import {NavigationContainer} from '@react-navigation/native';
+
+import {BookContext} from './Context/BookAppointment';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -57,12 +59,16 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const [booked, setBooked] = useState(null);
   const backgroundStyle = {
     backgroundColor: isDarkMode ? 'white' : 'white',
   };
 
-  return <Main />;
+  return (
+    <BookContext.Provider value={[booked, setBooked]}>
+      <Main />
+    </BookContext.Provider>
+  );
 };
 
 const styles = StyleSheet.create({
