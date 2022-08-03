@@ -21,7 +21,7 @@ import TextComp from '../../Components/TextComp';
 import IOcons from 'react-native-vector-icons/Ionicons';
 import FIcons from 'react-native-vector-icons/Fontisto';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
-
+const bgImg = require('./images/login.png');
 const Register = props => {
   const {_id, name, service, pic, rate, status} = props;
   const [isUser, setIsUser] = useState(true);
@@ -43,36 +43,9 @@ const Register = props => {
             width: widthPercentageToDP(100),
             borderRadius: 10,
           }}
-          source={{
-            uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
-          }}
+          source={bgImg}
           resizeMode="cover"
         />
-        <View
-          style={{flexDirection: 'row', marginTop: widthPercentageToDP(-15)}}>
-          <TouchableOpacity
-            onPress={() => {
-              setIsUser(true);
-            }}
-            style={{padding: 5}}>
-            <FIcons
-              name="person"
-              style={{color: isUser ? css.brandPrimary : '#aaaaaa'}}
-              size={widthPercentageToDP(10)}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => {
-              setIsUser(false);
-            }}
-            style={{padding: 5}}>
-            <FIcons
-              name="doctor"
-              style={{color: !isUser ? css.brandPrimary : '#aaaaaa'}}
-              size={widthPercentageToDP(10)}
-            />
-          </TouchableOpacity>
-        </View>
       </View>
       <View
         style={{
@@ -87,6 +60,31 @@ const Register = props => {
             marginTop: widthPercentageToDP(0),
             width: widthPercentageToDP(95),
           }}>
+          <View
+            style={{flexDirection: 'row', marginTop: widthPercentageToDP(-15)}}>
+            <TouchableOpacity
+              onPress={() => {
+                setIsUser(true);
+              }}
+              style={{padding: 5}}>
+              <FIcons
+                name="person"
+                style={{color: isUser ? css.brandPrimary : '#aaaaaa'}}
+                size={widthPercentageToDP(10)}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                setIsUser(false);
+              }}
+              style={{padding: 5}}>
+              <FIcons
+                name="doctor"
+                style={{color: !isUser ? css.brandPrimary : '#aaaaaa'}}
+                size={widthPercentageToDP(10)}
+              />
+            </TouchableOpacity>
+          </View>
           <View style={{marginTop: 10}}>
             <View
               style={{

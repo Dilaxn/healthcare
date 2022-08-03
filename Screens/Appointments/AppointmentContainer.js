@@ -55,10 +55,12 @@ const AppointmentContainer = ({navigation}) => {
                       <View style={{flex: 2, height: '100%'}} />
                       <View style={{flex: 4, height: '100%'}}>
                         <Image
-                          style={{height: '100%', borderRadius: 5}}
-                          source={{
-                            uri: 'https://thumbs.dreamstime.com/b/doctor-piles-hospital-22148150.jpg',
+                          style={{
+                            height: '100%',
+                            borderRadius: 5,
+                            width: '100%',
                           }}
+                          source={require('./ganu.jpeg')}
                           resizeMode="contain"
                         />
                       </View>
@@ -79,7 +81,7 @@ const AppointmentContainer = ({navigation}) => {
                                 fontSize: 17,
                                 color: '#fff',
                               }}>
-                              Dilakshan M.
+                              Kanushkar K.
                             </TextComp>
                           </View>
                           <View style={{flex: 2, width: '100%'}}>

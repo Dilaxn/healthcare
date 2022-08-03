@@ -22,8 +22,8 @@ const bannerData = [
     image: require('./b1.jpeg'),
     newLaunch: false,
     bookNow: true,
-    text1: 'At your service, on-demand!',
-    text2: `Making home services experts simple, reliable 
+    text1: 'Banner 1',
+    text2: `Banner Health patient account access, healthcare blog 
     and affordable.`,
   },
   {
@@ -31,16 +31,16 @@ const bannerData = [
     image: require('./b2.jpeg'),
     newLaunch: true,
     bookNow: true,
-    text1: 'Were now LIVE in AbuDhabi.',
-    text2: 'Get AED 25 OFF on first self service. HGSELF25',
+    text1: 'Banner 2.',
+    text2: 'Banner Health patient account access, healthcare blog',
   },
   {
     id: 3,
     image: require('./b3.jpeg'),
     newLaunch: true,
     bookNow: true,
-    text1: 'Launching COVID19 services',
-    text2: `Services you need in the safety and comfort 
+    text1: 'Banner 3',
+    text2: `Banner Health patient account access, healthcare blog
 of your home.`,
   },
 ];
